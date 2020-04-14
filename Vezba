@@ -9,8 +9,15 @@
     <input type="number" name="" id="input_a" value="0"> <br>
     <input type="number" name="" id="input_b" value="0"> <br>
     <p id="paragraf">0</p>
+    <select name="" id="operacije"  >
+        <option value="+">Saberi</option>
+        <option value="-">Oduzmi</option>
+        <option value="*">Pomnozi</option>
+        <option value="/">Podeli</option>
+      </select>
 
     <script>
+        
         function myFunc() {
             var a = document.querySelector('#input_a');
             var b = document.querySelector('#input_b');
