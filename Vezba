@@ -19,9 +19,15 @@
     <script>
         
         function myFunc() {
+
             var a = document.querySelector('#input_a');
             var b = document.querySelector('#input_b');
-            let rez = Number(a.value) + Number(b.value);
+
+            let rez = ;
+            var operacije = document.querySelector("#operacije");
+            operacije.addEventListener('change', myFunc);
+
+
             let paragraf = document.querySelector('#paragraf');
             paragraf.innerText = rez;
 
