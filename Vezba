@@ -12,17 +12,18 @@
 
     <script>
         function myFunc() {
-            
-            let rez = a + b;
+            var a = document.querySelector('#input_a');
+            var b = document.querySelector('#input_b');
+            let rez = Number(a.value) + Number(b.value);
             let paragraf = document.querySelector('#paragraf');
             paragraf.innerText = rez;
-            
+
         }
-        function init(params) {
-            var a = document.querySelector('#input_a').innerText;
-            var b = document.querySelector('#input_b').innerText;
-            a.addEventListener('cnange', myFunc);   
-            b.addEventListener('cnange', myFunc);
+        function init() {
+            var a = document.querySelector('#input_a');
+            var b = document.querySelector('#input_b');
+            a.addEventListener('change', myFunc);   
+            b.addEventListener('change', myFunc);
         }
 
         window.addEventListener('load', init);
