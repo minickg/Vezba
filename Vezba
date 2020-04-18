@@ -1,45 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <input type="number" name="" id="input_a" value="0"> <br>
-    <input type="number" name="" id="input_b" value="0"> <br>
-    <p id="paragraf">0</p>
-    <select name="" id="operacije"  >
-        <option value="+">Saberi</option>
-        <option value="-">Oduzmi</option>
-        <option value="*">Pomnozi</option>
-        <option value="/">Podeli</option>
-      </select>
+  </head>
+  <body>
+    <input type="text" name="" id="unesiteIme" /> <br />
+    <button id="dodaj-ime-dugme" onclick="dodajIme();">Dodaj</button>
+    <div id="imena"></div>
 
     <script>
-        
-        function myFunc() {
+      function dodajIme() {
+        let unesiteIme = document.querySelector("#unesiteIme").value;
+        let sablon = `${unesiteIme} <br />`;
+        document.querySelector("#imena").innerHTML += sablon;
+      }
 
-            var a = document.querySelector('#input_a');
-            var b = document.querySelector('#input_b');
+      function init() {
+        let btn = document.querySelector("#dodaj-ime-dugme");
+        btn.addEventListener("click", dodajIme);
+      }
 
-            let rez = ;
-            var operacije = document.querySelector("#operacije");
-            operacije.addEventListener('change', myFunc);
-
-
-            let paragraf = document.querySelector('#paragraf');
-            paragraf.innerText = rez;
-
-        }
-        function init() {
-            var a = document.querySelector('#input_a');
-            var b = document.querySelector('#input_b');
-            a.addEventListener('change', myFunc);   
-            b.addEventListener('change', myFunc);
-        }
-
-        window.addEventListener('load', init);
+      window.addEventListener("click", init);
     </script>
-</body>
+  </body>
 </html>
